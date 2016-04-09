@@ -12,7 +12,7 @@ var routes = require('./routes/index');
 
 var receipts = require('./routes/receipts');
 var lists = require('./routes/lists');
-var pantry = require('/routes/pantry');
+var pantry = require('./routes/pantry');
 var users = require('./routes/users');
 
 var app = express();
