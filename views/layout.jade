@@ -2,9 +2,16 @@ doctype html
 html
   head
     title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css")
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src="https://code.jquery.com/jquery-2.2.3.min.js",integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=",crossorigin="anonymous")
     script (src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js")
   body
-    block content
+    div(data-role='page')
+      div(data-role='header')
+      .ui-content(role='main')
+        block content
+      div(data-role='footer') 
+
+
