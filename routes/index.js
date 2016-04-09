@@ -9,4 +9,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'View Your Reciepts' });
 });
 
+
+
 module.exports = router;

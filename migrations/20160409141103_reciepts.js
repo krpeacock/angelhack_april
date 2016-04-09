@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-  knex.schema.createTable('receipts', function(req,res){
+  return knex.schema.createTable('receipts', function(req,res){
     table.increments();
     table.string('name');
     table.string('store_name');
