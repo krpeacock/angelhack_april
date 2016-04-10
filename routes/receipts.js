@@ -4,8 +4,23 @@ var knex = require('../db/knex.js');
 var methodOverride = require('method-override');
 var http = require('https');
 var hod = require('havenondemand');
+var fs = require('fs');
 var multer = require('multer');
-var upload = multer({dest: '/tmp'});
+var request = require('request');
+
+// fs.createReadStream('images/receipt.jpg').pipe(request.post('http://10.0.1.21:5000/'));
+
+
+var storage = multer.diskStorage({
+    destination: function(req, file, callback){
+      callback(null, '../uploads');
+    },
+    filename: function(req, file, callback){
+      callback(null, file.fieldname + '-' + Date.now());
+    }
+});
+
+var upload = multer({storage : storage}).single('image');
 
 client = new hod.HODClient('fe962457-0f26-424a-bd97-663116f742fd','v1');
 require('locus');
@@ -26,10 +41,11 @@ function text_filter(data) {
 
 // First Callback
 var text_callback = function(req, res){
-  eval(locus)
-  var image = req.body.image;
-  client.call('ocrdocument', image).on('data', text_filter);
+  client.call('ocrdocument', 'http://livingsuperhuman.com/wp-content/uploads/2012/02/011.jpg').on('data', text_filter);
 };
+// This post request works.
+https://api.havenondemand.com/1/api/sync/ocrdocument/v1?url=http://livingsuperhuman.com/wp-content/uploads/2012/02/011.jpg&apikey=fe962457-0f26-424a-bd97-663116f742fd
+//
 
 
 
@@ -46,6 +62,6 @@ var text_callback = function(req, res){
   });
 }*/
 
-router.post('/', upload.single('image'), text_callback);
+router.post('/', text_callback);
 
 module.exports = router;
