@@ -9,7 +9,18 @@ html
     script (src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js")
   body
     div(data-role='page')
-      div(data-role='header')
+      div(data-role="header")
+          h1 reciP (working title)
+          a(href="#")
+            img(src="http://f.cl.ly/items/1U2c3b1215383h3a2T2r/icon-menu.svg")
+        div(data-role="content")
+          ul(data-role="listview", data-inset="true")
+            li
+              a(href="#dialog") Dialog only
+            li
+              a(href="#dialog") Dialog only
+        div(data-role="footer", data-position="fixed")
+          h6 Magic Happens Here
       .ui-content(role='main')
         block content
       div(data-role='footer') 

@@ -6,7 +6,7 @@ require('locus');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'View Your Reciepts' });
+  res.render('pantry/index');
 });
 
 
