@@ -1,12 +1,12 @@
 
 exports.up = function(knex, Promise) {
-  knex.schema.createTable('receipts', function(req,res){
+  return knex.schema.createTable('recipes', function(table) {
     table.increments();
     table.string('name');
-    table.string('store_name');
+    table.string('description');
   });
 };
 
 exports.down = function(knex, Promise) {
-  knex.schema.dropTable('receipts');
+  return knex.schema.dropTable('recipes');
 };
