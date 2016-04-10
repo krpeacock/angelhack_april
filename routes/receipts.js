@@ -64,7 +64,7 @@ https://api.havenondemand.com/1/api/sync/ocrdocument/v1?url=http://livingsuperhu
 }*/
 
 router.post('/', function(req, res){
-  res.redirect('/receipts/show');
+  res.redirect('/receipts');
 });
 
 module.exports = router;

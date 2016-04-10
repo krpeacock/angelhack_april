@@ -14,3 +14,29 @@ table {
   background-color: #004C00 !important;
   text-shadow: none !important;
 }
+.alert,.warn{
+  position: relative;
+  top: 97px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #F2DEDE;
+  border-radius: 10px;
+}
+.warn{
+  top: 260px;
+  background-color: #FCF8E3;
+}
+tr{ 
+  margin-top: 20px;
+}
+.ingredientList form, .ingredientList label{
+  display:block;
+}
+#directions{
+  padding: 0 30px;
+}
+#recipe_img{
+  float:right;
+  max-width: 50vw;
+  max-height: 50vh;
+}

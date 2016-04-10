@@ -10,15 +10,18 @@ router.get('/', function(req, res, next) {
   res.render('login', { title: 'View Your Reciepts' });
 });
 
-/* GET home page. */
 router.get('/home', function(req, res, next) {
-  res.render('home', {});
+  res.render('home');
 });
+
+
+/* GET home page. */
+
 
 // Login Request
 router.post('/', function(req, res, next) {
   res.redirect('/home');
-
+});
   // var username = req.body.username;
   // var password = req.body.password;
   // var password_hash = crypto.createHash('sha256').update(password).digest('base64');
@@ -46,7 +49,6 @@ router.post('/', function(req, res, next) {
   //       });
   //     }
   //   })
-});
 
 
 

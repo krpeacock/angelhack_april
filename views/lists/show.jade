@@ -1,6 +1,20 @@
-extends layout
+extends ../layout
 
 block content
-  h1= receipt
+  if lists.length === 0
+    h1 You have No lists to display
+  else
+    h1 Ingredients you might need
+    h3 for: #{lists[0].name}
+    form.ingredientList
+      each list in lists
+        each ingredient in list.ingredients
+          label
+            input(type="checkbox" data-mini="true")
+            p= ingredient
+
+
+
+
   //- img
   //- text

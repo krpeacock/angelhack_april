@@ -1,4 +1,32 @@
 extends ../layout
 
 block content
-    h3 See all suggested recipes
+  h2 Sautéed Broccoli, Tomatoes, and Bacon
+  img(src="http://cdn-image.realsimple.com/sites/default/files/styles/rs_main_image/public/image/images/1109/broccoli-tomato_300.jpg?itok=mn2miFXF" id="recipe_img")
+  form
+    label Rating
+    p  4.5 out of 5 
+    label Serves
+    p 4
+    label Prep time
+    p 25 min 
+  a(href="") Read Reviews
+
+  h3 Ingredients
+  form.ingredientList
+    label 
+      input(type="checkbox" data-mini="true")
+      p 4 slices bacon, cut into 1-inch pieces 
+    label
+      input(type="checkbox" data-mini="true")
+      p bunch broccoli, cut into florets (6 cups)
+    label 
+      input(type="checkbox" data-mini="true")
+      p kosher salt and black pepper
+ 
+
+    
+  h3(style='text-align:center') Directions
+  ol.ui-listview(data-role='listview' id="directions")
+    p 1.) In a large skillet, cook the bacon over medium heat, stirring often, until crisp, 6 to 8 minutes. Transfer to a plate.
+    p 2.) To the skillet, add the broccoli and tomatoes and cook, tossing often, until the broccoli is tender, 8 to 10 minutes. Season with 1/2 teaspoon salt and 1/4 teaspoon pepper. Sprinkle with the bacon.

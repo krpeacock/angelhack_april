@@ -1,25 +1,62 @@
 extends ../layout
 
 block content
-  table#pantry-table.ui-responsive.ui-body-d.ui-shadow.table-stripe(data-role='table')
-    thead
-      tr.ui-bar-d
-        th(data-priority='1') ID
-        th(data-priority='persist') Ingredient
-        th(data-priority='2') (Partially) good until
-        th(data-priority='3') Recipe Count
-    tbody
-      tr
-          th 2
-          td
-              a(href='#', data-rel='external') Eggs
-          td 4/
-          td 97%
-          td 64
-      tr
-        th 1
-        td
-          a(href='#', data-rel='external') Milk
-          td 4/12/2016
-          td 100%
-          td 74
+  div(data-role="tabs" id="tabs")
+    div(data-role="navbar")
+      ul
+        li
+          a(href="#alert" data-ajax="false" ui-state="focused") Bad today! 
+        li
+          a(href="#warn" data-ajax="false") Use soon
+        li
+          a(href="#expired" data-ajax="false") Expired
+
+    #alert
+      table#pantry-table.ui-responsive.ui-body-d.ui-shadow.table-stripe(data-role='table')
+        thead
+          tr.ui-bar-d
+            th(data-priority='1') IDsss
+            th(data-priority='persist') Ingredient
+            th(data-priority='2') Good until
+            th(data-priority='3') Amount Remaining
+        tbody
+          tr
+              th 2
+              td
+                  a(href='#', data-rel='external') Eggs
+              td 4/10/2016
+              td 30%
+              td 64
+    #warn
+      table#pantry-table.ui-responsive.ui-body-d.ui-shadow.table-stripe(data-role='table')
+        thead
+          tr.ui-bar-d
+            th(data-priority='1') ID
+            th(data-priority='persist') Ingredient
+            th(data-priority='2') Good until
+            th(data-priority='3') Amount Remaining
+        tbody
+          tr
+              th 2
+              td
+                  a(href='#', data-rel='external') Milk
+              td 4/14/2016
+              td 30%
+              td 64
+
+    #expired
+      table#pantry-table.ui-responsive.ui-body-d.ui-shadow.table-stripe(data-role='table')
+        thead
+          tr.ui-bar-d
+            th(data-priority='1') IDdd
+            th(data-priority='persist') Ingredient
+            th(data-priority='2') Good until
+            th(data-priority='3') Amount Remaining
+        tbody
+          tr
+              th 2
+              td
+                  a(href='#', data-rel='external') Broccoli
+              td 4/10/2016
+              td 30%
+              td 64
