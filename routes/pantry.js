@@ -4,11 +4,11 @@ var knex = require('../db/knex.js');
 var methodOverride = require('method-override');
 require('locus');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('pantry/index');
-});
-
-
+//router.get('/pantry/show', function(req, res, next) {
+//  res.render('pantry/show');
+//});
+//router.get('/pantry', function(req, res, next) {
+//  res.render('pantry/show');
+//});
 
 module.exports = router;

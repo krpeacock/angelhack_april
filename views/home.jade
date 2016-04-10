@@ -1,6 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-
+  ul(data-role='listview',data-inset='true')
+    li
+      a(href='/receipts/new').ui-li-icon.ui-corner-none.ui-icon-plus Scan new a receipt
+    li
+      a(href='/pantry').ui-li-icon.ui-corner-none.ui-icon-star Pantry
+    li
+      a(href='/lists').ui-li-icon.ui-corner-none.ui-icon-shop Grocery List
+    li
+      a(href='/recipes').ui-li-icon.ui-corner-none.ui-icon-heart Recipe suggestions
+    li
+      a(href='/recycles').ui-li-icon.ui-corner-none.ui-icon-recycle Expired food
