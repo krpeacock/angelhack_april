@@ -10,6 +10,11 @@ router.get('/', function(req, res, next) {
   res.render('login', { title: 'View Your Reciepts' });
 });
 
+/* GET home page. */
+router.get('/home', function(req, res, next) {
+  res.render('home', {});
+});
+
 // Login Request
 router.post('/', function(req, res, next) {
   var username = req.body.username;

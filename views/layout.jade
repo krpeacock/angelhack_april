@@ -3,19 +3,25 @@ html
   head
     title= title
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css")
+    link(rel='stylesheet' href='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="https://code.jquery.com/jquery-2.2.3.min.js",integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=",crossorigin="anonymous")
-    script(src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js")
+    script(src='https://code.jquery.com/jquery-2.2.3.min.js',integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=',crossorigin='anonymous')
+    script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
   body
     div(data-role='page')
-      div(data-role="header")
-          h1 reciP (working title)
-          a(href="#")
-            img(src="http://f.cl.ly/items/1U2c3b1215383h3a2T2r/icon-menu.svg")
-        div(data-role="content")
-        div(data-role="footer", data-position="fixed")
-          h6 Magic Happens Here
+      div#navigationPanel(data-role='panel')
+        a(href='/').ui-btn.ui-btn-icon-left.ui-icon-home Home
+        a(href='/pantry').ui-btn.ui-btn-icon-left.ui-icon-star Pantry
+        a.ui-btn.ui-btn-icon-left.ui-icon-shop Grocery List
+        a.ui-btn.ui-btn-icon-left.ui-icon-heart Receipts
+
+      div(data-role='header')
+          a.ui-btn-left.ui-btn.ui-btn-inline.ui-btn-mini.ui-btn-icon-left.ui-icon-bars(href='#navigationPanel') Menu
+          h1 Grocery Manager
+          a.ui-btn-right.ui-btn.ui-btn-inline.ui-btn-mini.ui-btn-icon-right.ui-icon-user(href='') Sign in
+        div(data-role='content')
+        div(data-role='footer', data-position='fixed')
+          h6 Created @ Angelhack
       .ui-content(role='main')
         block content
       div(data-role='footer') 
