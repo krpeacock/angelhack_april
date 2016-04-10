@@ -31,7 +31,7 @@ router.get('/new', function(req, res, next){
 });
 
 router.get('/', function(req, res, next) {
-  res.render('receipts/show');
+  res.render('receipts/index');
 });
 
 // Second Callback
@@ -62,6 +62,8 @@ https://api.havenondemand.com/1/api/sync/ocrdocument/v1?url=http://livingsuperhu
   });
 }*/
 
-router.post('/', text_callback);
+router.post('/', function(req, res){
+  res.redirect('/receipts/show');
+});
 
 module.exports = router;
