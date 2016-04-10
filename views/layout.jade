@@ -9,21 +9,12 @@ html
     script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
   body
     div(data-role='page')
-      div#navigationPanel(data-role='panel')
-        a(href='/').ui-btn.ui-btn-icon-left.ui-icon-home Home
-        a(href='/pantry').ui-btn.ui-btn-icon-left.ui-icon-star Pantry
-        a.ui-btn.ui-btn-icon-left.ui-icon-shop Grocery List
-        a.ui-btn.ui-btn-icon-left.ui-icon-heart Receipts
 
       div(data-role='header')
-          a.ui-btn-left.ui-btn.ui-btn-inline.ui-btn-mini.ui-btn-icon-left.ui-icon-bars(href='#navigationPanel') Menu
+          a.ui-btn-left.ui-btn.ui-btn-inline.ui-btn-mini.ui-btn-icon-left.ui-icon-home(href='/') Home
           h1 Grocery Manager
           a.ui-btn-right.ui-btn.ui-btn-inline.ui-btn-mini.ui-btn-icon-right.ui-icon-user(href='') Sign in
-        div(data-role='content')
-        div(data-role='footer', data-position='fixed')
-          h6 Created @ Angelhack
-      .ui-content(role='main')
+      div.ui-content(role='main', data-role='content')
         block content
-      div(data-role='footer') 
-
-
+      div(data-role='footer', data-position='fixed')
+        h6 Created @ Angelhack

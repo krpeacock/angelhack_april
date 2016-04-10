@@ -9,3 +9,8 @@ a {
 table {
   margin-top: 15px;
 }
+
+.confirm{
+  background-color: #004C00 !important;
+  text-shadow: none !important;
+}
