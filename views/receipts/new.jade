@@ -1,7 +1,7 @@
-extends layout
+extends ../layout
 
 block content
-    h3 Add a reciept
-    form(action="/receipts")
-      input(type="file" accept="image/*;capture=camera")
-      input(type="submit")
+    h3 Add a receipt
+    form(action="/receipts" method="post" enctype="multipart/form-data")
+      input(type="file" accept="image/*;capture=camera" name="image")
+      input(type="submit" value="Submit")
