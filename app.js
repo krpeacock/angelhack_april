@@ -11,6 +11,7 @@ var routes = require('./routes/index');
 
 
 var receipts = require('./routes/receipts');
+var recipes = require('./routes/recipes');
 var lists = require('./routes/lists');
 var pantry = require('./routes/pantry');
 var users = require('./routes/users');
@@ -31,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/receipts', receipts);
+app.use('/recipes', recipes);
 app.use('/lists', lists);
 app.use('/pantry', pantry);
 

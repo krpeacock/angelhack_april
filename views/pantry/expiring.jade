@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  table#pantry-table.ui-responsive.ui-body-d.ui-shadow.table-stripe(data-role='table')
+    thead
+      tr.ui-bar-d
+        th(data-priority='1') ID
+        th(data-priority='persist') Ingredient
+        th(data-priority='2') (Partially) good until
+        th(data-priority='3') Recipe Count
+    tbody
+      tr
+          th 2
+          td
+              a(href='#', data-rel='external') Eggs
+          td 4/
+          td 97%
+          td 64
+      tr
+        th 1
+        td
+          a(href='#', data-rel='external') Milk
+          td 4/12/2016
+          td 100%
+          td 74

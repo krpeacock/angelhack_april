@@ -25,14 +25,15 @@ var upload = multer({storage : storage}).single('image');
 client = new hod.HODClient('fe962457-0f26-424a-bd97-663116f742fd','v1');
 require('locus');
 
+router.get('/', function(req, res, next) {
+  res.render('receipts/index');
+});
 
 router.get('/new', function(req, res, next){
   res.render('receipts/new');
 });
 
-router.get('/', function(req, res, next) {
-  res.render('receipts/index');
-});
+
 
 // Second Callback
 function text_filter(data) {
